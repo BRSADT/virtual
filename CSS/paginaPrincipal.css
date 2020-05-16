@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+height: 100%;
+
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+aside.responsive,nav.responsive{
+  background-color: palevioletred;
+  height: 100%;
+}
+
+
+div.contenido{
+position: absolute;
+height: 100%;
+margin-left: 20%;
+
+}
+
+article{
+background-color: whitesmoke;
+overflow: hidden;
+position: static;
+margin-top: 0%;
+height: 100%;
+}
+
+main{
+  padding-right: 3%;
+}
+.main{
+visibility: hidden;
+
+position: absolute;
+}
+
+#Cajacontenido  {
+  position: absolute;
+overflow: scroll !important;
+    height: 100%;
+  font-size: 350%;
+  font-weight: bold;
+  text-align: justify;
+
+
+ z-index: 5;
+}
+
+ul.MenuOpciones{
+  position: relative;
+  z-index: 4;
+  color: #FFF;
+  text-align: center;
+
+   height: 100%;
+      margin-right:20%;
+        margin-top: 50%;
+        font-weight: 200;
+        font-size: 26px;
+margin-left: 5%;
+}
+ul.MenuOpciones li:hover {
+  transform: rotateX( 0deg ) rotateY( 0deg ) rotateZ( 370deg );
+   cursor: pointer;
+}
+
+
+ul.MenuOpciones li{
+    transition: 0.8s;
+    display:block;
+    margin-top:100%;
+    margin-left: 2%;
+    color:white;
+    text-align: center;
+  
+    letter-spacing: 2px;
+    font-weight: 150;
+    font-size: 100%;
+}
+
+#contenidoEfecto {
+
+   top: 0%;
+z-index: 5;
+}
+#contenidoEfecto.mover{
+  overflow: hidden;
+  position: absolute;
+  animation: scroll 100s linear ;
+}
+
+
+/*Para que la barra de scroll no aparezca*/
+@keyframes scroll {
+ 0%   { top: 100%; }
+ 100% { top: -170%; }
+}
+
+/*Cuando la pantalla se hace más chica y el header se va hacia arriba*/
+
+@media screen and (max-width: 575px) {
+#Cajacontenido{
+      height: 85%;
+}
+  article{
+
+padding-top: 20%;
+  }
+  div.contenido{
+margin-top: 0%;
+margin-left: 3%;
+font-weight: 150;
+font-size: small;
+    width: 100%;
+}
+  aside.responsive,nav.responsive{
+    height: 15%;
+position: fixed;
+  }
+
+ul.MenuOpciones{
+  margin-top: 0%;
+  margin-right: 5%;
+      padding-top: 5%;
+      font-size: 20px;
+      margin-left: 0%;
+}
+ul.MenuOpciones li{
+display: inline;
+
+}
+
+.login {
+  position: relative;
+  z-index: 5;
+  margin:0 auto;
+    margin-left: 30%;
+  max-width:500px;
+ 
+}
+
+.Registrarse {
+  visibility: hidden;
+  display: none;
+  position: relative;
+  z-index: 5;
+  margin:0 auto;
+    margin-left: 30%;
+  max-width:500px;
+ 
+}
+
+}
+
+
+
+@media screen and (max-width: 263px) {
+  .contenido{
+  font-size: 15px;
+  }
+
+}
+
+
+/*Registrarse*/
+.Registrarse {
+  visibility: hidden;
+  display: none;
+  position: relative;
+  z-index: 5;
+  margin:0 auto;
+    padding-top: 8%;
+
+  max-width:500px;
+}
+
+/*LOGIN*/
+
+
+
+
+
+
+.login {
+  visibility: visible;
+  display: block;
+  position: relative;
+  z-index: 5;
+  margin:0 auto;
+    padding-top: 8%;
+
+  max-width:500px;
+}
+.header {
+    z-index: 5;
+  color:palevioletred;
+  text-align:center;
+  font-size:300%;
+}
+
+.form {
+    z-index: 5;
+  border:.5px solid #fff;
+
+  border-radius:10px;
+  box-shadow:0px 0px 10px slateblue;
+}
+.form h3 {
+    z-index: 5;
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+}
+.form {
+
+    z-index: 5;
+  box-sizing:border-box;
+  padding-top:10%;
+	padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+
+.Registrarse input[type="text"],
+.Registrarse input[type="password"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+
+
+.form input[type="button"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+}
+.btnIngresar{
+
+  border:.5px solid #fff;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  border-radius:10px;
+  box-shadow:0px 0px 10px slateblue;
+
+}
+.sign-up{
+  color:#f2f2f2;
+  margin-left:-70%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.no-access {
+  color:#E86850;
+  margin:20px 0px 20px -57%;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.try-again {
+  color:#f2f2f2;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .form h3 {
+    text-align:center;
+    margin:0;
+  }
+  .sign-up, .no-access {
+    margin:10px 0;
+  }
+  .login-button {
+    margin-bottom:10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
