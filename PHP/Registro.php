@@ -22,23 +22,24 @@ $conexion=$con->getConexion();
 				$encontrado=1; 
 			}	
 		}
-		if($correcto==1){
-			session_start();
-			$_SESSION['usuario']=$user;
-			
-			echo "<script type='text/javascript'>window.location='../HTML/inicio.php';</script>";
-		}
-		else{
+		
 			if($encontrado==1){
 				
-				echo "<script type='text/javascript'>alert('Password Incorrecto'); window.location='../HTML/index.php';</script>";
+				echo "<script type='text/javascript'>alert('Este usuario ya esta registrado'); window.location='../HTML/index.php';</script>";
 				
 			}else{
+				$sql= "INSERT INTO tablaUsuarios(usuario,pass) values ('".$user."','".$pass."')";
 				
-				echo "<script type='text/javascript'>alert('Datos incorrectos'); window.location='../HTML/index.php';</script>";
-				
+				if(mysqli_query($conexion,$sql)){
+				session_start();
+				$_SESSION['usuario']=$user;
+				echo "<script type='text/javascript'>alert('Registro completo'); window.location='../HTML/inicio.php';</script>";
+				}
+				else{
+				echo "Error".$sql."".mysqli_error($conexion);
+				}
 			}
-		}
+		
 	}
 	else{
 	echo "Conexion NO exitosa";
